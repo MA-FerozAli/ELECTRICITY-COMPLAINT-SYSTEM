@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration | Electricity Complaints</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 450px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2a5298;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            border-color: #2a5298;
+            outline: none;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #2a5298;
+            color: white;
+            border: none;
+            font-weight: 600;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #1e3c72;
+        }
+
+        .login-link {
+            margin-top: 16px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .login-link a {
+            color: #2a5298;
+            text-decoration: none;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Create Your Account</h2>
+    <form method="POST" action="/register">
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="fullname" placeholder="e.g., John Doe" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="e.g., johndoe@example.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="e.g., 9876543210" required>
+        </div>
+
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Choose a username" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Create a password" required>
+        </div>
+
+        <div class="form-group">
+            <label for="confirm">Confirm Password</label>
+            <input type="password" id="confirm" name="confirm_password" placeholder="Re-enter password" required>
+        </div>
+
+        <button class="submit-btn" type="submit">Register</button>
+
+        <div class="login-link">
+            Already have an account? <a href="/login">Login here</a>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
